@@ -1,0 +1,60 @@
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+img { max-width: 100%; }
+
+header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: .5rem;
+  padding: .5rem 1rem;
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+header p { margin: 0; }
+
+
+#search { display: flex; flex-wrap: wrap; gap: .5rem; padding: 1rem 1rem 0; }
+#search input { flex: 1; min-width: 0; }
+#status { padding: 0 1rem; }
+
+
+#list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 200px), 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+article {
+  border: 1px solid #ccc;
+  padding: .5rem;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+article h2 { font-size: 1.2rem; }
+
+nav { display: flex; justify-content: center; gap: 1rem; padding: 1rem; }
+
+/*Fruites del diable*/
+
+/* Gomu Gomu */
+[data-fruit="gomu"] img { transition: transform .5s; }
+[data-fruit="gomu"] img:hover { transform: scaleY(1.5); }
+
+/* Doru Doru */
+[data-fruit="doru"] h2:hover,
+[data-fruit="doru"] p:hover { color: white; text-shadow: 0 0 2px gray; }
+
+/* Suke Suke */
+[data-fruit="suke"] article { opacity: .05; }
+[data-fruit="suke"] article:hover { opacity: 1; }
