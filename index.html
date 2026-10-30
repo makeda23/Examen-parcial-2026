@@ -6,7 +6,23 @@
   <title>One Piece</title>
   <script type="module" src="/js/app.js"></script>
 </head>
-<body>
+<body data-fruit="none">
+  <header>
+    <p>Recompenses: <strong id="counter">0</strong> ฿</p>
+    <select id="fruit">
+      <option value="none">Sense fruita</option>
+      <option value="gomu">Gomu Gomu</option>
+      <option value="doru">Doru Doru</option>
+      <option value="suke">Suke Suke</option>
+    </select>
+  </header>
+  <form id="search">
+    <input id="q" placeholder="Cerca per nom">
+    <button>Cercar</button>
+    <button type="button" id="clear" hidden>Netejar</button>
+  </form>
+  <p id="status"></p>
+
   <section id="list"></section>
 </body>
 </html>
